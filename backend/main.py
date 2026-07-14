@@ -63,18 +63,19 @@ def home():
 
 @app.post("/analyze-message")
 def analyze_msg(data: MessageRequest):
-
     result = analyze_message(data.message)
 
-    confidence = max(0, 100 - result["risk"])
+    if result["status"] == "Safe":
+        confidence = 100 - result["risk"]
+    else:
+        confidence = result["risk"]
 
     return {
         "status": result["status"],
         "risk": result["risk"],
-        "confidence": confidence,
+        "confidence": f"{confidence}%",
         "reasons": result["reasons"]
     }
-
 
 # -----------------------------
 # URL Analysis
