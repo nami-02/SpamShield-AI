@@ -38,6 +38,15 @@ function Navbar() {
         </NavLink>
 
         <NavLink
+          to="/screenshot-scanner"
+          className={({ isActive }) =>
+            isActive ? "nav-item active" : "nav-item"
+          }
+        >
+          Screenshot Scanner
+        </NavLink>
+
+        <NavLink
           to="/history"
           className={({ isActive }) =>
             isActive ? "nav-item active" : "nav-item"

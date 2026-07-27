@@ -5,6 +5,7 @@ import {
   FaShieldAlt,
   FaLink,
   FaCommentDots,
+  FaImage,
   FaRobot,
   FaGlobe,
   FaBug,
@@ -36,9 +37,10 @@ function Home() {
           </h1>
 
           <p className="home-hero-description">
-            SpamShield AI analyzes suspicious URLs and messages
-            using artificial intelligence and real-time security
-            intelligence to identify potential threats.
+            SpamShield AI analyzes suspicious URLs, messages,
+            and screenshots using artificial intelligence and
+            real-time security intelligence to identify
+            potential threats.
           </p>
 
           <div className="home-action-buttons">
@@ -57,6 +59,14 @@ function Home() {
             >
               <FaCommentDots />
               Analyze Message
+            </button>
+
+            <button
+              className="home-secondary-button"
+              onClick={() => navigate("/screenshot-scanner")}
+            >
+              <FaImage />
+              Scan Screenshot
             </button>
           </div>
 
@@ -187,6 +197,25 @@ function Home() {
 
             <button onClick={() => navigate("/message-scanner")}>
               Analyze Message
+              <FaArrowRight />
+            </button>
+          </div>
+
+          <div className="home-scanner-card">
+            <div className="scanner-card-icon">
+              <FaImage />
+            </div>
+
+            <h3>Screenshot Scam Scanner</h3>
+
+            <p>
+              Upload a screenshot and let OCR-powered analysis
+              flag phishing prompts, login traps, and suspicious
+              impersonation patterns.
+            </p>
+
+            <button onClick={() => navigate("/screenshot-scanner") }>
+              Scan Screenshot
               <FaArrowRight />
             </button>
           </div>

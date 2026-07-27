@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import UrlScanner from "./pages/UrlScanner";
 import MessageScanner from "./pages/MessageScanner";
+import ScreenshotScanner from "./pages/ScreenshotScanner";
 import History from "./pages/history";
 import Dashboard from "./pages/dashboard";
 
@@ -24,6 +25,11 @@ function App() {
         <Route
           path="/message-scanner"
           element={<MessageScanner />}
+        />
+
+        <Route
+          path="/screenshot-scanner"
+          element={<ScreenshotScanner />}
         />
 
         <Route

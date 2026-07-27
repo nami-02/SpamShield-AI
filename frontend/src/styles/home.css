@@ -171,15 +171,18 @@
 .home-secondary-button {
     border: 1px solid #334155;
 
-    background: #1e293b;
+    background: linear-gradient(
+        90deg,
+        #1d4ed8,
+        #3b82f6
+    );
 }
 
 .home-secondary-button:hover {
     transform: translateY(-3px);
 
-    background: #273449;
-
-    border-color: #475569;
+    box-shadow: 0 12px 30px
+        rgba(37, 99, 235, 0.3);
 }
 
 .home-trust-points {
@@ -521,7 +524,7 @@
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 

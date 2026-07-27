@@ -93,6 +93,10 @@
     border-top: 3px solid #ef4444;
 }
 
+.screenshot-card {
+    border-top: 3px solid #22d3ee;
+}
+
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1.6fr 1fr;
@@ -183,14 +187,20 @@
     flex-direction: column;
     background: #1e293b;
     border-radius: 50%;
+    text-align: center;
 }
 
 .trust-circle-inner strong {
     font-size: 48px;
+    line-height: 0.9;
 }
 
 .trust-circle-inner span {
+    display: block;
+    margin-top: 2px;
     color: #94a3b8;
+    font-size: 16px;
+    line-height: 1;
 }
 
 .trust-label {
@@ -300,4 +310,88 @@
         width: 160px;
         height: 160px;
     }
+    /* =========================================
+   DASHBOARD SCAN TYPE BADGES
+========================================= */
+
+.dashboard-scan-type {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.dashboard-type-url {
+    color: #60a5fa;
+
+    background: rgba(59, 130, 246, 0.12);
+
+    border: 1px solid
+        rgba(59, 130, 246, 0.25);
+}
+
+.dashboard-type-message {
+    color: #c084fc;
+
+    background: rgba(168, 85, 247, 0.12);
+
+    border: 1px solid
+        rgba(168, 85, 247, 0.25);
+}
+
+.dashboard-type-screenshot {
+    color: #67e8f9;
+
+    background: rgba(34, 211, 238, 0.12);
+
+    border: 1px solid
+        rgba(34, 211, 238, 0.25);
+}
+
+
+/* =========================================
+   DASHBOARD RESPONSIVE TABLE
+========================================= */
+
+.recent-table-container {
+    overflow-x: auto;
+}
+
+.recent-table {
+    min-width: 950px;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.dashboard-cards {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+
+@media (max-width: 1000px) {
+    .dashboard-cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 600px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
 }
